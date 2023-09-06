@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Exemplo de formulário no HTML</h1>
+    </header>
+    <article>
+        <!--Início do Formulário com a tag <form>-->
+        <!--Atributo action refere-se ao destino do formulário-->
+        <form method="post" id="fContato" action="mailto:barbarabarros837@gmail.com"
+              oninput="result.value=parseInt(valor01.value) + parseInt(valor02.value)">
+         <fieldset>
+             <legend><strong>Identificação:</strong> </legend>
+             <br>
+                <!--Label é o rotulo do input-->
+                <label for="cName">Nome:</label><br>
+                <!--Input campo para digitação do usuário-->
+                <input type="text" size="50" name="tNome" id="cNome" 
+                required="required">
+                <br>
+                <p>Você mora:</p>
+                <!--Input para selecionar dentre as opções-->
+                <input type="radio" name="tipo" id="cid" value="C">
+                <label for="cid">Cidade</label><br>
+                <input type="radio" name="tipo" id="inter" value="I">
+                <label for="inter">Interior</label>
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <legend><strong>Informações Extras:</strong></legend>
+                <p>Qual meio de transporte você usa?</p>
+                <!--Input para selecionar múltiplas opções-->
+                <input type="checkbox" id="transporte1" name="transporte1" value="Bike">
+                <label for="transporte1">Bicicleta</label><br>
+                <input type="checkbox" id="transporte2" name="transporte2" value="Car">
+                <label for="transporte2">Carro</label><br>
+                <input type="checkbox" id="transporte3" name="transporte3" value="Metro">
+                <label for="transporte3">Metrô</label><br>
+                <input type="checkbox" id="transporte4" name="transporte4" value="Bus">
+                <label for="transpote4">Ônibus</label>
+                <br> <br>
+                <label for="t">Selecione seu time:</label>
+                <select id="t" name="t">
+                    <option value="Sport">Sport</option>
+                    <option value="Nautico">Naútico</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                    <option value="Retro">Retrô</option>
+                    <option value="Ibis">Ibís</option>
+                    <option value="Corinthians">Corinthiians</option>
+                    </select><br><br>
+                    <label for="ccid">Escolha a sua Cidade na lista:</label>
+                    <input list="cidade" name="tCid" id="cCid" placeholder="Sua Cidade">
+                    <datalist id="cidade">
+                        <option value="Recife"></option>
+                        <option value="Boa Viagem"></option>
+                        <option value="Olinda"></option>
+                        <option value="Paulista"></option>
+                    </datalist>
+                 </fieldset>
+                <br><br>
+                <fieldset>
+                    <legend><Strong>Idade:</Strong></legend>
+                    0
+                    <input type="range" id="valor01" name="valor01">
+                    100 +
+                    <input type="number" name="valor02" id="valor02" value="50">
+                    =
+                    <output name="result" for="valor01 valor02"></output>
+                </fieldset>
+                    <br><br>
+                <fieldset>
+                    <legend><strong>Sua opnião:</strong></legend>
+                    <p>Sugestões, elogios e críticas:</p>
+                    <textarea name="message" cols="50" rows="10" placeholder="Deixe aqui a sua mensagem!" required></textarea>
+                    <br><br>
+
+                </fieldset>
+                <br>
+            
+                <!--Input gera botão e value para definir seu nome-->
+                <input type="submit" value="Enviar">
+        </form>
+    </article>
+    <br><br><hr>
+    <footer>
+        <small>Instituto da Oportunidade Social</small><br>
+        by Bárbara Barros &copy;
+    </footer>
+    
+</body>
+</html>
